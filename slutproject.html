@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <h2 align='center' font-size='large'>Redbull F1</h2>
+        <title>Redbull F1</title>
+    </head>
+    <body>
+        <style>
+            #mitti {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            body{background-color: rgb(3, 3, 47);}
+
+        </style>
+        <table bgcolor='lightgrey' id='mitti' style="height: 600px; width:1000px; border: 1px solid black">
+            <caption><hi>Redbull F1</hi></caption>
+            <tr>
+                <td height='200' align='center'><h1>Alex albon</h1></td>
+                <td rowspan="2" width='200' height='400'><img id='imgClick' src='632980fcb216752aa8f61ef7fb68b873.jpg' onclick="bild()" width="200" height="400"> </td>
+                <td align='center' >Redbull F1 car 2019</td>
+                <td height='200' width='200' colspan="2" align='center'><h1>Max Verstappen</h1></td>
+            </tr>
+            <tr>
+                <td rowspan="2" width='200' height='300' > <img id='bild1' onmouseover='mouseover()' onmouseout='mouseout()' src='alex albon.jpg' width="200" height="400"> </td>
+                <td height='200' width='200' ><ul>
+                    <li>Age: 20</li>
+                    <li>Height: 1.81m</li>
+                    <li>Ethnicity: Dutch </li>
+                </ul></td>
+                <td colspan="2" height='100%' align='center'><img id='bild2' onclick="alert1()" src='max verstappen.jpg' width="400" height="200"></td>
+            </tr>
+            <tr>
+                <td height='200' width='200' align='center'><a href='https://sv.wikipedia.org/wiki/Red_Bull_Racing' target='_blank'>Rain tires</a></td>
+                <td colspan="2" height='100%' id="video" onmouseout=mouseout2()><img src='Red-Bull-3.jpg' onmouseover=video_onclick() width="400" height="200"></td>
+                <td width='200'>        <center>
+                    <marquee behavior="alternate" scrollamount="1">Slow...</marquee>
+                    <marquee behavior="alternate" scrollamount="12">Fast...</marquee>
+                    <marquee behavior="alternate" scrollamount="25">Faster...</marquee>
+                    <marquee behavior="alternate" scrollamount="55">Lightning!</marquee>
+                    </center></td>
+            </tr>
+
+
+        </table> 
+        <script scr='script.js'>
+            function mouseover() {
+                let x = document.getElementById("bild1");
+                x.src = "Ted_Söderberg _200203267174.jpg.jpg";
+                } 
+                
+            function mouseout() {
+                let x = document.getElementById("bild1");
+                x.src = "alex albon.jpg";
+                } 
+            function mouseout2() {
+                let x = document.getElementById("video");
+                x.innerHTML = "<img id='video' src='Red-Bull-3.jpg' onmouseover=video_onclick() width='400' height='200'>" ;
+                }
+            function alert1(){
+                alert('Redbull är det bästa f1 laget. Hamilton suger')
+                }
+
+            function bild(){
+            let img1 = '632980fcb216752aa8f61ef7fb68b873.jpg'
+            let img2 = '152b8a0fd55531ab09b45eca53394ae0.jpg'
+
+            if (document.getElementById("imgClick").src.indexOf(img1) >= 0){
+                document.getElementById("imgClick").src = img2}
+            else {
+                document.getElementById("imgClick").src = img1}
+            }
+            function video_onclick(){
+            let x = document.getElementById("video")
+            x.innerHTML = "<iframe width='400' height='200' onmouseout=mouseout2() src='https://www.youtube.com/embed/Zy3drgwXWP8' frameborder='0' allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+            }
+        </script>
+
+
+
+
+    </body>
+
+
+
+</html>
